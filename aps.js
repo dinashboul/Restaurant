@@ -40,11 +40,11 @@ var Id=999;//(counter)
                     cell1.innerHTML = `${this.FoodName}`;
                     cell2.innerHTML = `${this.TypeOfFood}`;
                     cell3.innerHTML = `${this.Price}`;
-                    table.appendChild(cell0);
-                    table.appendChild(cell1);
-                    table.appendChild(cell2);
-                    table.appendChild(cell3);
-
+                    row.appendChild(cell0);
+                    row.appendChild(cell1);
+                    row.appendChild(cell2);
+                    row.appendChild(cell3);
+                     
 
 
 
