@@ -1,6 +1,6 @@
 'use strict';
 var Id=999;//(counter)
-        
+        const Array=[];
         function Restaurant(FoodName,FoodID,Price,TypeOfFood)
         {
             this.FoodName=FoodName;
@@ -14,44 +14,21 @@ var Id=999;//(counter)
 
             };
         }     
-        
-        const Restaurant1 =new Restaurant("Burger",0,2.5,"food");
-        
-        // console.log(Restaurant1);
-
-        Restaurant.prototype.render=function(){
-           let table = document.getElementById("myTable");
-        //     let row = table.insertRow;
-
-        //    let cell0 = row.insertCell(0);
-        //     let cell1 = row.insertCell(1);
-        //     let cell2 = row.insertCell(2);
-        //     let cell3 = row.insertCell(3);
-           
+        ////////////////savedata
+        function saveData(data){
+            let stringObj=JSON.stringify(data);
+            localStorage.setItem("The food is",stringObj);
             
-                let row =document.createElement("tr");
-                table.appendChild(row);
-             let cell0 = document.createElement("td");
-            let cell1 = document.createElement("td");
-            let cell2 = document.createElement("td");
-            let cell3 = document.createElement("td");
-                     
-                    cell0.innerHTML = `${this.FoodID}`;
-                    cell1.innerHTML = `${this.FoodName}`;
-                    cell2.innerHTML = `${this.TypeOfFood}`;
-                    cell3.innerHTML = `${this.Price}`;
-                    row.appendChild(cell0);
-                    row.appendChild(cell1);
-                    row.appendChild(cell2);
-                    row.appendChild(cell3);
-                     
+           }
 
+          
+                            
+                             
 
+           /////////////////////////////form event                  
 
-        }
         let form =document.getElementById('form');
-        form.addEventListener("submit",handleFun);
-
+           form.addEventListener("submit",handleFun);
         function handleFun(event){
             event.preventDefault();
             let name=event.target.FoodName.value;
@@ -59,9 +36,15 @@ var Id=999;//(counter)
             
             let selectedOption = event.target.type.options[type.selectedIndex];
             const selectedText = selectedOption.text;
-            // const selectedValue = selectedOption.value;
-            console.log(name,price,selectedText);
+            
+           // console.log(name,price,selectedText);
             const rest =new Restaurant(name,Id,price,selectedText);
             rest.uniqueId(Id);
-            rest.render();
+            Array.push(rest);
+            saveData(Array);
+            
         }
+       
+       
+       
+       

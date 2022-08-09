@@ -42,7 +42,7 @@
          color:hotpink;
          margin-left:auto; 
          margin-right:auto;
-         margin-top: auto;
+         margin-top: 30%;
          margin-bottom: auto;
          padding-top: 20px;
          
@@ -59,14 +59,14 @@
        input[type=text]{
         width: 50%;
         padding: 12px 20px;
-         margin: 8px 0;
+         margin: 2px 0;
          box-sizing: border-box;
          border: 2px solid red;
-  border-radius: 4px;
-  background-color:antiquewhite;
-  color:blue;
-  transition: width 0.4s ease-in-out;
-        margin-top: 100px;
+          border-radius: 4px;
+          background-color:antiquewhite;
+         color:blue;
+         transition: width 0.4s ease-in-out;
+          margin-top: 30%;
       }
       select {
         width: 50%;
