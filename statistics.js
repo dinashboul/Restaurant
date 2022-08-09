@@ -45,4 +45,9 @@ function render(){
              
  }
 }
+//  function uniqueId(){
+//                 this.FoodID=counter +1;
+//                     ++Id;
+
+//             };
  
